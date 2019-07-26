@@ -143,15 +143,17 @@ if cwd == '/app' or cwd[:4] == '/tmp':
         'default': dj_database_url.config(default='postgres://localhost')
     }
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure().
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # Honor the 'X-Forwarded-Proto' header for request.is_secure().
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers.
-ALLOWED_HOSTS = ['*']   
+    # Allow only Heroku to host the project.
+    ALLOWED_HOSTS = ['learning-log361.herokuapp.com']
 
-# Static assest configuration
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+    DEBUG = False
+
+    # Static assest configuration
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    STATIC_ROOT = 'staticfiles'
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
