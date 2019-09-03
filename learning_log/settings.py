@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j77()jz)=%q-(jux5amr9k3+)3ay-ay(i_l3&lg&d+nr=it3#1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# Allow only Heroku to host this project
+ALLOWED_HOSTS = ['learning-log361.heroku.app.com']
 
 
 # Application definition
