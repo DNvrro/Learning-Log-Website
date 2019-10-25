@@ -27,7 +27,7 @@ DEBUG = False
 
 
 # Allow only Heroku to host this project
-ALLOWED_HOSTS = ['learning-log.herokuapp.com']
+ALLOWED_HOSTS = ['learning-log361.herokuapp.com']
 
 
 # Application definition
