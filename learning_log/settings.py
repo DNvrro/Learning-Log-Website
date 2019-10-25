@@ -151,7 +151,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Allow only Heroku to host the project.
     ALLOWED_HOSTS = ['learning-log361.herokuapp.com']
 
-    DEBUG = True
+    DEBUG = False
 
     # Static assest configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
