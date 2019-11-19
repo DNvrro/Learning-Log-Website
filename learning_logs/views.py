@@ -42,8 +42,6 @@ def new_topic(request):
         if form.is_valid():
             new_topic = form.save(commit=False)
             new_topic.owner = request.user
-            if request.POST["public"]:
-                new_topic.public = True
             new_topic.save()
             return HttpResponseRedirect(reverse('learning_logs:topics'))
 
